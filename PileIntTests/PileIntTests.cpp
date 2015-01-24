@@ -66,10 +66,10 @@ namespace Tests
 		//	Assert::AreEqual(premierElement, 1);
 		//}
 
-		//TEST_METHOD(depiler_une_pile_vide_devrait_lancer_une_excpetion)
+		//TEST_METHOD(depiler_une_pile_vide_devrait_lancer_une_exception)
 		//{
 		//	//arrange
-		//	bool excpetionThrown = false;
+		//	bool exceptionThrown = false;
 		//	PileInt pile;
 
 		//	//action
@@ -80,17 +80,17 @@ namespace Tests
 		//	catch (std::runtime_error ex)
 		//	{
 
-		//		excpetionThrown = true;
+		//		exceptionThrown = true;
 		//	}
 
 		//	//Assert
-		//	Assert::IsTrue(excpetionThrown);
+		//	Assert::IsTrue(exceptionThrown);
 		//}
 
-		//TEST_METHOD(consulter_une_pile_vide_devrait_lancer_une_ecpetion)
+		//TEST_METHOD(consulter_une_pile_vide_devrait_lancer_une_exception)
 		//{
 		//	//Arrange
-		//	bool excpetionThrown = false;
+		//	bool exceptionThrown = false;
 		//	PileInt pile;
 
 		//	//Action
@@ -101,11 +101,11 @@ namespace Tests
 		//	catch (std::runtime_error ex)
 		//	{
 
-		//		excpetionThrown = true;
+		//		exceptionThrown = true;
 		//	}
 
 		//	//Assert
-		//	Assert::IsTrue(excpetionThrown);
+		//	Assert::IsTrue(exceptionThrown);
 		//}
 	};
 }
