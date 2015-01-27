@@ -8,7 +8,10 @@ class PileInt
 public:
 	PileInt(void);
 	bool estVide();
+	void empiler(int i);
 private:
+	NoeudInt* premierNoeud;
+	NoeudInt* dernierNoeud;
 };
 
 #endif //PILE_H_
