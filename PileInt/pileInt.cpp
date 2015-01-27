@@ -25,6 +25,7 @@ void PileInt::empiler(int _nombre)
 	if (estVide())
 	{
 		sommetPile->setContenu(_nombre);
+		sommetPile->setPrecedent(nullptr);
 	}
 	else if (!estVide())
 	{
@@ -37,5 +38,19 @@ void PileInt::empiler(int _nombre)
 
 void PileInt::depiler()
 {
-
+	if (!estVide())
+	{
+		if (sommetPile->getPrecedent != nullptr)
+		{
+			NoeudInt* temp = sommetPile;
+			sommetPile = sommetPile->getPrecedent;
+			delete temp;
+		}
+		else if (sommetPile->getPrecedent == nullptr)
+		{
+			NoeudInt* temp = sommetPile;
+			sommetPile = nullptr;
+			delete temp;
+		}
+	}
 }
