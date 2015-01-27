@@ -29,26 +29,26 @@ namespace Tests
 			Assert::IsFalse(pile.estVide());
 		}
 
-		//TEST_METHOD(depiler_un_int_devrait_le_supprimer_de_la_pile)
-		//{
-		//	PileInt pile;
+		TEST_METHOD(depiler_un_int_devrait_le_supprimer_de_la_pile)
+		{
+			PileInt pile;
 
-		//	pile.empiler(10);
-		//	pile.depiler();
+			pile.empiler(10);
+			pile.depiler();
 
-		//	Assert::IsTrue(pile.estVide());
-		//}
+			Assert::IsTrue(pile.estVide());
+		}
 
-		//TEST_METHOD(consulter_devrait_retourner_le_int_du_dessus_de_la_pile)
-		//{
-		//	const int INT_ATTENDU = 10;
-		//	PileInt pile;
+		TEST_METHOD(consulter_devrait_retourner_le_int_du_dessus_de_la_pile)
+		{
+			const int INT_ATTENDU = 10;
+			PileInt pile;
 
-		//	pile.empiler(INT_ATTENDU);
-		//	int intObtenu = pile.consulter();
+			pile.empiler(INT_ATTENDU);
+			int intObtenu = pile.consulter();
 
-		//	Assert::AreEqual(INT_ATTENDU, intObtenu);
-		//}
+			Assert::AreEqual(INT_ATTENDU, intObtenu);
+		}
 
 		//TEST_METHOD(consulter_tous_les_int_de_la_pile_devrait_les_retourner_dans_l_ordre_inverse_de_l_ajout)
 		//{
