@@ -1,4 +1,7 @@
 #include "PileInt.h"
+#include <iostream>
+
+using namespace std;
 
 PileInt::PileInt()
 {
@@ -16,20 +19,28 @@ bool PileInt::estVide()
 
 int PileInt::consulter()
 {
-	return sommetPile->getContenu();
+	if (estVide())
+	{
+		throw runtime_error("Le pile est vide");
+	}
+	else
+	{
+		return sommetPile->getContenu();
+	}
 }
 
 void PileInt::empiler(int _nombre)
 {
-	sommetPile = new NoeudInt;
 	if (estVide())
 	{
+		sommetPile = new NoeudInt;
 		sommetPile->setContenu(_nombre);
 		sommetPile->setPrecedent(nullptr);
 	}
 	else if (!estVide())
 	{
 		NoeudInt* temp = sommetPile;
+		sommetPile = new NoeudInt;
 		sommetPile->setContenu(_nombre);
 		sommetPile->setPrecedent(temp);
 		delete temp;
@@ -40,17 +51,13 @@ void PileInt::depiler()
 {
 	if (!estVide())
 	{
-		if (sommetPile->getPrecedent != nullptr)
-		{
-			NoeudInt* temp = sommetPile;
-			sommetPile = sommetPile->getPrecedent;
-			delete temp;
-		}
-		else if (sommetPile->getPrecedent == nullptr)
-		{
-			NoeudInt* temp = sommetPile;
-			sommetPile = nullptr;
-			delete temp;
-		}
+		NoeudInt* temp = sommetPile;
+		sommetPile = new NoeudInt;
+		sommetPile = temp->getPrecedent();
+		delete temp;
+	}
+	else if (estVide())
+	{
+		throw runtime_error("Le pile est vide");
 	}
 }
