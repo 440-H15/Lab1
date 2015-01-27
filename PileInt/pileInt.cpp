@@ -41,9 +41,20 @@ void PileInt::depiler()
 		premierNoeud = premierNoeud->chercherProchain();
 		delete noeudADepiler;
 	}
+	else
+	{
+		throw runtime_error("La pile est vide");
+	}
 }
 
 int PileInt::consulter()
 {
-	return premierNoeud->contenu;
+	if (premierNoeud != nullptr)
+	{
+		return premierNoeud->contenu;
+	}
+	else
+	{
+		throw runtime_error("La pile est vide");
+	}
 }

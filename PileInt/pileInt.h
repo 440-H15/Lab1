@@ -3,6 +3,9 @@
 
 #include "noeudInt.h"
 
+#include <iostream>
+using namespace std;
+
 class PileInt
 {
   public:
