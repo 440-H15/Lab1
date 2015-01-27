@@ -4,8 +4,11 @@
 class NoeudInt
 {
   public:
-	
-  private:
+
+	  NoeudInt(int _contenu);
+
+private:
+	int contenu;
 	
 };
 

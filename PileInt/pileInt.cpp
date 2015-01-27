@@ -3,5 +3,15 @@
 
 bool PileInt::estVide()
 {
-	return true;
+	if (sommetPile == nullptr) // Si sommetPile n'est pas null
+	{
+		return true;
+	}
+
+	return false;	
+}
+
+void PileInt::empiler(int i)
+{
+	this->sommetPile = new NoeudInt(i);
 }
