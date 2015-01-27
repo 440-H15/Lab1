@@ -36,6 +36,11 @@ void PileInt::depiler(){
 }
 
 int PileInt::consulter(){
-	int resultat = sommetPile->getContenu();
-	return resultat;
+	if (estVide() == false){
+		int resultat = sommetPile->getContenu();
+		return resultat;
+	}
+	else{
+		throw runtime_error("La pile est vide");
+	}
 }
