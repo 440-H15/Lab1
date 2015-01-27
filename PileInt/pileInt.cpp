@@ -2,19 +2,27 @@
 
 PileInt::PileInt()
 {
-	premierNoeud = nullptr;
-	dernierNoeud = nullptr;
+	sommetPile = nullptr;
 }
 
 bool PileInt::estVide()
 {
-	if (premierNoeud == nullptr)
+	if (sommetPile == nullptr)
 		return true;
 	return false;
 }
 
 void PileInt::empiler(int i)
 {
-	premierNoeud = new NoeudInt(i);
-	dernierNoeud = premierNoeud;
+	sommetPile = new NoeudInt(i);
+}
+
+void PileInt::depiler()
+{
+	sommetPile = nullptr;
+}
+
+int PileInt::consulter()
+{
+	return sommetPile->getContenu();
 }
