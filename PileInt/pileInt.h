@@ -11,9 +11,11 @@ class PileInt
 	  bool estVide();
 	  void empiler(int _nombre);
 	  void depiler();  
+	  int consulter();
 
   private:
 	  NoeudInt *sommetPile;
+
 
 	
 };

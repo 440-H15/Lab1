@@ -35,6 +35,7 @@ void PileInt::empiler(int _nombre){
 	}
 
 	sommetPile = newPtr;
+	newPtr = nullptr;
 
 	delete newPtr;
 }
@@ -52,5 +53,18 @@ void PileInt::depiler()
 		delete newPtr;
 	}
 
+
+}
+
+int PileInt::consulter()
+{
+	if (sommetPile == nullptr)
+	{
+		return 0;
+	}
+	else
+	{
+		return sommetPile->getContenu();
+	}
 
 }
