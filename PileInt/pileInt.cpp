@@ -21,7 +21,7 @@ void PileInt::empiler(int _nombre){
 	newNode->setContenu(_nombre);
 	newNode->setPrecedent(sommetPile);
 	sommetPile = newNode;
-	delete newNode;
+	
 }
 
 void PileInt::depiler(){
@@ -35,11 +35,8 @@ void PileInt::depiler(){
 }
 
 int PileInt::consulter(){
-	int sommet;
 
-	sommet = sommetPile->getContenu();
-
-	return sommet;
+	return sommetPile->getContenu();
 }
 
 
