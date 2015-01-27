@@ -15,3 +15,9 @@ void PileInt::empiler(int i)
 {
 	this->sommetPile = new NoeudInt(i);
 }
+
+void PileInt::depiler()
+{
+	NoeudInt tempNoeud = *this->sommetPile;
+	this->sommetPile = sommetPile->getPrecedent();
+}

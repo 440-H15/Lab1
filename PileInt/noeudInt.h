@@ -6,10 +6,11 @@ class NoeudInt
   public:
 
 	  NoeudInt(int _contenu);
+	  NoeudInt* getPrecedent();
 
 private:
 	int contenu;
-	
+	NoeudInt* precedent = nullptr;
 };
 
 #endif //NOEUDINT_H_
