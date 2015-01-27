@@ -26,9 +26,13 @@ void PileInt::empiler(int _nombre){
 
 void PileInt::depiler(){
 	if (estVide() == false){
-		NoeudInt* noeudAEnlever = new NoeudInt();
-		noeudAEnlever = sommetPile;
+		NoeudInt* noeudAEnlever = sommetPile;
 		sommetPile = noeudAEnlever->getPrecedent();
 		delete noeudAEnlever;
 	}
+}
+
+int PileInt::consulter(){
+	int resultat = sommetPile->getContenu();
+	return resultat;
 }
