@@ -1,6 +1,9 @@
 #include "PileInt.h"
 
-
+PileInt::PileInt()
+{
+	sommetPile = nullptr;
+}
 
 bool PileInt::estVide()
 {
@@ -13,7 +16,7 @@ bool PileInt::estVide()
 
 int PileInt::consulter()
 {
-	return 0;
+	return sommetPile->getContenu;
 }
 
 void PileInt::empiler(int _nombre)
