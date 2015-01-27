@@ -6,9 +6,9 @@
 class PileInt
 {
   public:
-	     
+	  bool estVide();
+
   private:
-        
 };
 
 #endif //PILE_H_
