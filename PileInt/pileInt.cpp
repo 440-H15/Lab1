@@ -21,7 +21,7 @@ int PileInt::consulter()
 
 void PileInt::empiler(int _nombre)
 {
-
+	
 }
 
 void PileInt::depiler()
