@@ -11,3 +11,7 @@ void empiler(int _nombre){
 void depiler(){
 
 }
+
+int consulter(){
+	return 0;
+}
