@@ -1,4 +1,5 @@
 #include "PileInt.h"
+#include <system_error>
 
 PileInt::PileInt()
 {
@@ -21,6 +22,11 @@ void PileInt::empiler(int _nombre)
 
 void PileInt::depiler()
 {
+	if (estVide())
+	{
+		throw std::runtime_error("Le pile est vide");
+	}
+
 	NoeudInt *aSupprimer = this->sommetPile;
 	this->sommetPile = aSupprimer->getPrecedent();
 
