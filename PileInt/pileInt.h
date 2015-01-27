@@ -9,6 +9,8 @@ class PileInt
 {
   public:
 	  PileInt();
+	  ~PileInt();
+	  void empiler(int);
 	  bool estVide();
   private:
 	  NoeudInt *premierNoeud;
