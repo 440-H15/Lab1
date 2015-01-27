@@ -3,9 +3,14 @@
 
 
 
+PileInt::PileInt(NoeudInt * _noeud)
+{
+	sommetPile == _noeud;
+}
+
 void PileInt::empliler(int _nombre)
 {
-
+	
 }
 
 int PileInt::consulter()
