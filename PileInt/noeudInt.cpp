@@ -13,12 +13,12 @@ int NoeudInt::setContenu(int _nombre)
 	contenu = _nombre;
 }
 
-NoeudInt NoeudInt::getPrecenent()
+NoeudInt * NoeudInt::getPrecenent()
 {
-	return *precedent;
+	return precedent;
 }
 
-void NoeudInt::setPrecedent(NoeudInt _noeudPrecedent)
+void NoeudInt::setPrecedent(NoeudInt * _noeudPrecedent)
 {
-	*precedent = _noeudPrecedent;
+	precedent = _noeudPrecedent;
 }
