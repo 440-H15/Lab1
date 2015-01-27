@@ -28,6 +28,13 @@ int PileInt::consulter()
 
 void PileInt::depiler()
 {
+	if (!estVide())
+	{
+		NoeudInt * tempNoeud = new NoeudInt();
+		tempNoeud = sommetPile;
+		sommetPile = sommetPile->getPrecenent();
+		delete tempNoeud;
+	}
 }
 
 bool PileInt::estVide()

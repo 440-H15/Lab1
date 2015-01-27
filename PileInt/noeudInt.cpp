@@ -8,7 +8,7 @@ int NoeudInt::getContenu()
 	return contenu;
 }
 
-int NoeudInt::setContenu(int _nombre)
+void NoeudInt::setContenu(int _nombre)
 {
 	contenu = _nombre;
 }
