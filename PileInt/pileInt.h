@@ -6,8 +6,12 @@
 class PileInt
 {
   public:
-	     
+	  void empliler(int _nombre);
+	  int consulter();
+	  void depiler();
+	  bool estVide();
   private:
+	  NoeudInt *sommetPile;
         
 };
 
