@@ -14,12 +14,33 @@ bool PileInt::estVide()
 
 void PileInt::empiler(int i)
 {
-	sommetPile = new NoeudInt(i);
+	NoeudInt* temp = new NoeudInt(i);
+
+	if (sommetPile == nullptr)
+	{
+		sommetPile = temp;
+		sommetPile->setPrecedent(nullptr);
+	}
+	else
+	{
+		temp->setPrecedent(sommetPile);
+		sommetPile = temp;
+	}
 }
 
 void PileInt::depiler()
 {
-	sommetPile = nullptr;
+	if (sommetPile->getPrecedent() == nullptr)
+	{
+		delete sommetPile;
+		sommetPile = nullptr;
+	}
+	else
+	{
+		NoeudInt* temp = sommetPile;
+		sommetPile = sommetPile->getPrecedent();
+		delete temp;
+	}
 }
 
 int PileInt::consulter()
