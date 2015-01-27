@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
-
+#
 #include "pileInt.h"
 
 #include <vld.h>
@@ -13,21 +13,21 @@ namespace Tests
 	{
 	public:
 
-		//TEST_METHOD(creer_une_pile_vide)
-		//{
-		//	PileInt pile;
+		TEST_METHOD(creer_une_pile_vide)
+		{
+			PileInt pile;
 
-		//	Assert::IsTrue(pile.estVide());
-		//}
+			Assert::IsTrue(pile.estVide());
+		}
 
-		//TEST_METHOD(empiler_un_int_devrait_l_ajouter_a_la_pile)
-		//{
-		//	PileInt pile;
+		/*TEST_METHOD(empiler_un_int_devrait_l_ajouter_a_la_pile)
+		{
+			PileInt pile;
 
-		//	pile.empiler(10);
+			pile.empiler(10);
 
-		//	Assert::IsFalse(pile.estVide());
-		//}
+			Assert::IsFalse(pile.estVide());
+		}*/
 
 		//TEST_METHOD(depiler_un_int_devrait_le_supprimer_de_la_pile)
 		//{
