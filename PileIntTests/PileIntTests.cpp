@@ -65,25 +65,25 @@ namespace Tests
 			Assert::AreEqual(premierElement, 1);
 		}
 
-		//TEST_METHOD(depiler_une_pile_vide_devrait_lancer_une_exception)
-		//{
-		//	//arrange
-		//	bool exceptionThrown = false;
-		//	PileInt pile;
+		TEST_METHOD(depiler_une_pile_vide_devrait_lancer_une_exception)
+		{
+			//arrange
+			bool exceptionThrown = false;
+			PileInt pile;
 
-		//	//action
-		//	try
-		//	{
-		//		pile.depiler();
-		//	}
-		//	catch (std::runtime_error ex)
-		//	{
-		//		exceptionThrown = true;
-		//	}
+			//action
+			try
+			{
+				pile.depiler();
+			}
+			catch (std::runtime_error ex)
+			{
+				exceptionThrown = true;
+			}
 
-		//	//Assert
-		//	Assert::IsTrue(exceptionThrown);
-		//}
+			//Assert
+			Assert::IsTrue(exceptionThrown);
+		}
 
 		//TEST_METHOD(consulter_une_pile_vide_devrait_lancer_une_exception)
 		//{

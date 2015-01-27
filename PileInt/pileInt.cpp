@@ -1,4 +1,5 @@
 #include "PileInt.h"
+#include <system_error>
 
 PileInt::PileInt()
 {
@@ -30,6 +31,8 @@ void PileInt::empiler(int i)
 
 void PileInt::depiler()
 {
+	if (estVide() == true) throw std::runtime_error("Le pile est vide");
+
 	if (sommetPile->getPrecedent() == nullptr)
 	{
 		delete sommetPile;
