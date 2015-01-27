@@ -1,5 +1,8 @@
 #include "PileInt.h"
 #include "noeudInt.h"
+#include <iostream>
+
+using namespace std;
 
 PileInt::PileInt(){
 	sommetPile = nullptr;
@@ -26,17 +29,26 @@ void PileInt::empiler(int _nombre){
 
 void PileInt::depiler(){
 
-	NoeudInt* tempNode = new NoeudInt();
-	*tempNode = *sommetPile;
-	sommetPile = sommetPile->getPrecedent();
-
-	delete tempNode;
+	if (!estVide()){
+		NoeudInt* tempNode = new NoeudInt();
+		*tempNode = *sommetPile;
+		sommetPile = sommetPile->getPrecedent();
+		delete tempNode;
+	}
+	else{
+		throw runtime_error("La pile est vide");
+	}
 
 }
 
 int PileInt::consulter(){
-
-	return sommetPile->getContenu();
+	if (estVide()){
+		throw runtime_error("La pile est vide");
+	}
+	else{
+		return sommetPile->getContenu();
+	}
+	
 }
 
 

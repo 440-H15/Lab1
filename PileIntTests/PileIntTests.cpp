@@ -50,62 +50,62 @@ namespace Tests
 			Assert::AreEqual(INT_ATTENDU, intObtenu);
 		}
 
-		//TEST_METHOD(consulter_tous_les_int_de_la_pile_devrait_les_retourner_dans_l_ordre_inverse_de_l_ajout)
-		//{
-		//	PileInt pile;
+		TEST_METHOD(consulter_tous_les_int_de_la_pile_devrait_les_retourner_dans_l_ordre_inverse_de_l_ajout)
+		{
+			PileInt pile;
 
-		//	pile.empiler(1);
-		//	pile.empiler(3);
+			pile.empiler(1);
+			pile.empiler(3);
 
-		//	int dernierElement = pile.consulter();
-		//	pile.depiler();
-		//	int premierElement = pile.consulter();
+			int dernierElement = pile.consulter();
+			pile.depiler();
+			int premierElement = pile.consulter();
 
 
-		//	Assert::AreEqual(dernierElement, 3);
-		//	Assert::AreEqual(premierElement, 1);
-		//}
+			Assert::AreEqual(dernierElement, 3);
+			Assert::AreEqual(premierElement, 1);
+		}
 
-		//TEST_METHOD(depiler_une_pile_vide_devrait_lancer_une_exception)
-		//{
-		//	//arrange
-		//	bool exceptionThrown = false;
-		//	PileInt pile;
+		TEST_METHOD(depiler_une_pile_vide_devrait_lancer_une_exception)
+		{
+			//arrange
+			bool exceptionThrown = false;
+			PileInt pile;
 
-		//	//action
-		//	try
-		//	{
-		//		pile.depiler();
-		//	}
-		//	catch (std::runtime_error ex)
-		//	{
+			//action
+			try
+			{
+				pile.depiler();
+			}
+			catch (std::runtime_error ex)
+			{
 
-		//		exceptionThrown = true;
-		//	}
+				exceptionThrown = true;
+			}
 
-		//	//Assert
-		//	Assert::IsTrue(exceptionThrown);
-		//}
+			//Assert
+			Assert::IsTrue(exceptionThrown);
+		}
 
-		//TEST_METHOD(consulter_une_pile_vide_devrait_lancer_une_exception)
-		//{
-		//	//Arrange
-		//	bool exceptionThrown = false;
-		//	PileInt pile;
+		TEST_METHOD(consulter_une_pile_vide_devrait_lancer_une_exception)
+		{
+			//Arrange
+			bool exceptionThrown = false;
+			PileInt pile;
 
-		//	//Action
-		//	try
-		//	{
-		//		pile.consulter();
-		//	}
-		//	catch (std::runtime_error ex)
-		//	{
+			//Action
+			try
+			{
+				pile.consulter();
+			}
+			catch (std::runtime_error ex)
+			{
 
-		//		exceptionThrown = true;
-		//	}
+				exceptionThrown = true;
+			}
 
-		//	//Assert
-		//	Assert::IsTrue(exceptionThrown);
-		//}
+			//Assert
+			Assert::IsTrue(exceptionThrown);
+		}
 	};
 }

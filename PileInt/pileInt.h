@@ -7,7 +7,6 @@ class PileInt
 {
   public:
 	  PileInt();
-	  ~PileInt();
 	  bool estVide();
 	  void empiler(int _nombre);
 	  int consulter();
