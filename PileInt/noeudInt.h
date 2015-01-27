@@ -3,7 +3,7 @@
 
 class NoeudInt
 {
-  public:
+  public:d
 	
   private:
 	
