@@ -5,16 +5,20 @@ using namespace std;
 
 int NoeudInt::getContenu()
 {
+	return contenu;
 }
 
 int NoeudInt::setContenu(int _nombre)
 {
+	contenu = _nombre;
 }
 
 NoeudInt NoeudInt::getPrecenent()
 {
+	return *precedent;
 }
 
 void NoeudInt::setPrecedent(NoeudInt _noeudPrecedent)
 {
+	*precedent = _noeudPrecedent;
 }

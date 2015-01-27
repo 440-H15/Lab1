@@ -6,15 +6,13 @@
 class PileInt
 {
   public:
-	  NoeudInt * sommetPile;
-
-  private:
 	  void empiler(int _nombre);
 	  int consulter();
 	  void depiler();
 	  bool estVide();
 
-
+  private:
+	  NoeudInt * sommetPile;
 	
 };
 
