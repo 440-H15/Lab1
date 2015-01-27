@@ -2,17 +2,19 @@
 
 PileInt::PileInt()
 {
-	premierNoeud = NULL;
+	premierNoeud = nullptr;
 }
 
 PileInt::~PileInt()
 {
-	//insérer les delete
+	while (premierNoeud != nullptr){
+		depiler();
+	}
 }
 
 bool PileInt::estVide()
 {
-	if (premierNoeud == NULL){
+	if (premierNoeud == nullptr){
 		return true;
 	}
 	return false;
@@ -20,7 +22,7 @@ bool PileInt::estVide()
 
 void PileInt::empiler(int valeur)
 {
-	if (premierNoeud == NULL)
+	if (premierNoeud == nullptr)
 	{
 		premierNoeud = new NoeudInt(valeur);
 	}
@@ -29,5 +31,14 @@ void PileInt::empiler(int valeur)
 		NoeudInt * tempNoeud = premierNoeud;
 		premierNoeud->contenu = valeur;
 		premierNoeud->assignerProchain(tempNoeud);
+	}
+}
+
+void PileInt::depiler()
+{
+	if (premierNoeud != nullptr){
+		NoeudInt * noeudADepiler = premierNoeud;
+		premierNoeud = premierNoeud->chercherProchain();
+		delete noeudADepiler;
 	}
 }

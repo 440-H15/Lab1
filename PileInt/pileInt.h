@@ -2,8 +2,6 @@
 #define PILE_H_
 
 #include "noeudInt.h"
-#include <iostream>
-using namespace std;
 
 class PileInt
 {
@@ -11,6 +9,7 @@ class PileInt
 	  PileInt();
 	  ~PileInt();
 	  void empiler(int);
+	  void depiler();
 	  bool estVide();
   private:
 	  NoeudInt *premierNoeud;

@@ -27,15 +27,15 @@ namespace Tests
 			Assert::IsFalse(pile.estVide());
 		}
 
-		//TEST_METHOD(depiler_un_int_devrait_le_supprimer_de_la_pile)
-		//{
-		//	PileInt pile;
+		TEST_METHOD(depiler_un_int_devrait_le_supprimer_de_la_pile)
+		{
+			PileInt pile;
 
-		//	pile.empiler(10);
-		//	pile.depiler();
+			pile.empiler(10);
+			pile.depiler();
 
-		//	Assert::IsTrue(pile.estVide());
-		//}
+			Assert::IsTrue(pile.estVide());
+		}
 
 		//TEST_METHOD(consulter_devrait_retourner_le_int_du_dessus_de_la_pile)
 		//{
