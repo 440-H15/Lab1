@@ -7,6 +7,7 @@ class PileInt
 {
   public:
 	  bool estVide();
+	  void empiler(int _nombre);
   private:
         
 };
