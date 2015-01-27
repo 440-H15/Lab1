@@ -35,5 +35,10 @@ void PileInt::depiler()
 
 int PileInt::consulter()
 {
+	if (estVide())
+	{
+		throw std::runtime_error("Le pile est vide");
+	}
+
 	return this->sommetPile->getContenu();
 }
