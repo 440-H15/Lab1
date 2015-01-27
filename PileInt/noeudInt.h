@@ -7,7 +7,7 @@ class NoeudInt
 	
 	  int getContenu();
 	  void setContenu(int _contenu);
-	  NoeudInt getPrevious();
+	  NoeudInt* getPrevious();
 	  void setPrevious(NoeudInt *_previous);
   private:
 	  int contenu;

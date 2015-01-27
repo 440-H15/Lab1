@@ -12,9 +12,9 @@ void NoeudInt::setContenu(int _contenu)
 	contenu = _contenu;
 }
 
-NoeudInt NoeudInt::getPrevious()
+NoeudInt *NoeudInt::getPrevious()
 {
-	return *previous;
+	return previous;
 }
 
 void NoeudInt::setPrevious(NoeudInt *_previous)

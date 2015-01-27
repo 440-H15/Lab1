@@ -24,15 +24,26 @@ void PileInt::empiler(int _nombre)
 
 int PileInt::consulter()
 {
-	return 0;
+	if (!estVide()){
+		return first->getContenu();
+	}
+	else{
+		throw runtime_error("Le pile est vide");
+	}
+	
 }
 
 void PileInt::depiler()
 {
-	NoeudInt *nodeToRemove;
-	nodeToRemove = first;
+	if (!estVide()){
+	NoeudInt *nodeToRemove = new NoeudInt();
+	*nodeToRemove = *first;
 	first = first->getPrevious();
 	delete nodeToRemove;
+	}
+	else{
+		throw runtime_error("Le pile est vide");
+	}
 }
 
 bool PileInt::estVide()
