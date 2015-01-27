@@ -13,13 +13,23 @@ bool PileInt::estVide()
 
 void PileInt::empiler(int i)
 {
-	this->sommetPile = new NoeudInt(i);
+	if (estVide())
+	{
+		this->sommetPile = new NoeudInt(i);
+	} else
+	{
+		NoeudInt* vieuxSommet = this->sommetPile;
+		this->sommetPile = new NoeudInt(i);
+		this->sommetPile->setPrecedent(vieuxSommet);
+	}	
 }
 
 void PileInt::depiler()
 {
-	NoeudInt tempNoeud = *this->sommetPile;
-	this->sommetPile = sommetPile->getPrecedent();
+	NoeudInt* vieuxSommet = this->sommetPile; //new NoeudInt(sommetPile->getContenu());
+	// NoeudInt nouveauSommet = *this->sommetPile->getPrecedent();
+	this->sommetPile = this->sommetPile->getPrecedent();
+	delete vieuxSommet;
 }
 
 int PileInt::consulter()
