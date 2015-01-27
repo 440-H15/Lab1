@@ -6,6 +6,7 @@ class NoeudInt
   public:
 	  NoeudInt(int);
 	  void assignerProchain(NoeudInt*);
+	  NoeudInt* chercherProchain();
 
 	  int contenu;
   private:

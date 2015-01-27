@@ -29,7 +29,7 @@ void PileInt::empiler(int valeur)
 	else
 	{
 		NoeudInt * tempNoeud = premierNoeud;
-		premierNoeud->contenu = valeur;
+		premierNoeud = new NoeudInt(valeur);
 		premierNoeud->assignerProchain(tempNoeud);
 	}
 }
@@ -41,4 +41,9 @@ void PileInt::depiler()
 		premierNoeud = premierNoeud->chercherProchain();
 		delete noeudADepiler;
 	}
+}
+
+int PileInt::consulter()
+{
+	return premierNoeud->contenu;
 }
