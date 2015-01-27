@@ -5,10 +5,10 @@
 
 class PileInt
 {
-  public:
-	     
-  private:
-        
+public:
+	PileInt(void);
+	bool estVide();
+private:
 };
 
 #endif //PILE_H_

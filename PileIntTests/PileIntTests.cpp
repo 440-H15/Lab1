@@ -13,12 +13,12 @@ namespace Tests
 	{
 	public:
 
-		//TEST_METHOD(creer_une_pile_vide)
-		//{
-		//	PileInt pile;
+		TEST_METHOD(creer_une_pile_vide)
+		{
+			PileInt pile;
 
-		//	Assert::IsTrue(pile.estVide());
-		//}
+			Assert::IsTrue(pile.estVide());
+		}
 
 		//TEST_METHOD(empiler_un_int_devrait_l_ajouter_a_la_pile)
 		//{
@@ -61,7 +61,6 @@ namespace Tests
 		//	pile.depiler();
 		//	int premierElement = pile.consulter();
 
-
 		//	Assert::AreEqual(dernierElement, 3);
 		//	Assert::AreEqual(premierElement, 1);
 		//}
@@ -79,7 +78,6 @@ namespace Tests
 		//	}
 		//	catch (std::runtime_error ex)
 		//	{
-
 		//		exceptionThrown = true;
 		//	}
 
@@ -100,7 +98,6 @@ namespace Tests
 		//	}
 		//	catch (std::runtime_error ex)
 		//	{
-
 		//		exceptionThrown = true;
 		//	}
 
