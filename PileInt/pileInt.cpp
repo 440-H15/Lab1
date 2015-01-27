@@ -21,3 +21,8 @@ void PileInt::depiler()
 	NoeudInt tempNoeud = *this->sommetPile;
 	this->sommetPile = sommetPile->getPrecedent();
 }
+
+int PileInt::consulter()
+{
+	return this->sommetPile->getContenu();
+}
