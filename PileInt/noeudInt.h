@@ -4,9 +4,11 @@
 class NoeudInt
 {
   public:
-	
+	  NoeudInt(int _nombre, NoeudInt* _noeudPrecedent);
+	  ~NoeudInt();
   private:
-	
+	  int nombre;
+	  NoeudInt* noeudPrecedent;
 };
 
 #endif //NOEUDINT_H_
