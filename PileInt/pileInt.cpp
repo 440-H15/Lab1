@@ -16,12 +16,23 @@ bool PileInt::estVide()
 
 int PileInt::consulter()
 {
-	return sommetPile->getContenu;
+	return sommetPile->getContenu();
 }
 
 void PileInt::empiler(int _nombre)
 {
-	
+	sommetPile = new NoeudInt;
+	if (estVide())
+	{
+		sommetPile->setContenu(_nombre);
+	}
+	else if (!estVide())
+	{
+		NoeudInt* temp = sommetPile;
+		sommetPile->setContenu(_nombre);
+		sommetPile->setPrecedent(temp);
+		delete temp;
+	}
 }
 
 void PileInt::depiler()
