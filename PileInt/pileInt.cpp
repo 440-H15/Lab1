@@ -18,6 +18,17 @@ bool PileInt::estVide(){
 }
 
 void PileInt::empiler(int _nombre){
-	sommetPile = new NoeudInt(_nombre, sommetPile);
+	NoeudInt *noeudAjouter = new NoeudInt();
+	noeudAjouter->setContenu(_nombre);
+	noeudAjouter->setPrecedent(sommetPile);
+	sommetPile = noeudAjouter;
 }
 
+void PileInt::depiler(){
+	if (estVide() == false){
+		NoeudInt* noeudAEnlever = new NoeudInt();
+		noeudAEnlever = sommetPile;
+		sommetPile = noeudAEnlever->getPrecedent();
+		delete noeudAEnlever;
+	}
+}
