@@ -6,6 +6,14 @@ PileInt::PileInt()
 	this->sommetPile = nullptr;
 }
 
+PileInt::~PileInt()
+{
+	while (!this->estVide())
+	{
+		this->depiler();
+	}
+}
+
 bool PileInt::estVide()
 {
 	return (this->sommetPile == nullptr);
