@@ -29,14 +29,19 @@ void PileInt::empiler(int _nombre){
 	newPtr->setContenu(_nombre);
 
 
-	if (sommetPile != nullptr){
+	if (sommetPile == nullptr){
 
-		newPtr->setPrecedent(sommetPile);
+		sommetPile = newPtr;
 
 	}
-
+	else
+	{
+		newPtr->setPrecedent(sommetPile);
+	}
+	
 	sommetPile = newPtr;
 
+	
 }
 
 void PileInt::depiler()
@@ -46,6 +51,7 @@ void PileInt::depiler()
 
 		NoeudInt *newPtr = sommetPile;
 		sommetPile = sommetPile->getPrecedent();
+		newPtr = nullptr;
 
 		delete newPtr;
 	}
