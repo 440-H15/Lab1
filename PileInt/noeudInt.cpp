@@ -10,9 +10,9 @@ int NoeudInt::getContenu()
 	return this->contenu;
 }
 
-void NoeudInt::setPrecedent(NoeudInt* noeudPrecedent)
+void NoeudInt::setPrecedent(NoeudInt* _noeudPrecedent)
 {
-	this->precedent = noeudPrecedent;
+	this->precedent = _noeudPrecedent;
 }
 
 NoeudInt* NoeudInt::getPrecedent()

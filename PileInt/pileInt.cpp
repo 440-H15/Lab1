@@ -12,15 +12,15 @@ bool PileInt::estVide()
 	return false;	
 }
 
-void PileInt::empiler(int i)
+void PileInt::empiler(int _nombre)
 {
 	if (estVide())
 	{
-		this->sommetPile = new NoeudInt(i);
+		this->sommetPile = new NoeudInt(_nombre);
 	} else
 	{
 		NoeudInt* vieuxSommet = this->sommetPile;
-		this->sommetPile = new NoeudInt(i);
+		this->sommetPile = new NoeudInt(_nombre);
 		this->sommetPile->setPrecedent(vieuxSommet);
 	}	
 }
