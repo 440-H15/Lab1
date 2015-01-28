@@ -7,8 +7,9 @@ class PileInt
 {
   public:
 	  bool estVide();
+	  void empiler(int contenu);
   private:
-        
+	  NoeudInt* sommetPile = nullptr;
 };
 
 #endif //PILE_H_

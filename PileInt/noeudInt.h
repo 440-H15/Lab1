@@ -3,8 +3,11 @@
 
 class NoeudInt
 {
-  public:
-	
+public:
+	void setContenu(int contenu);
+	int getContenu();
+	NoeudInt* getPrecedent();
+	void setPrecedent();
   private:
 	
 };

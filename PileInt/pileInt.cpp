@@ -1,8 +1,12 @@
 #include "PileInt.h"
 
-
-
 bool PileInt::estVide()
 {
-	return true;
+	return sommetPile == nullptr;
+}
+
+void PileInt::empiler(int contenu)
+{
+	NoeudInt nouveauNoeud;
+	sommetPile = &nouveauNoeud;
 }
