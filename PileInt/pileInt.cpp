@@ -30,5 +30,12 @@ void PileInt::depiler()
 
 int PileInt::consulter()
 {
-	return sommetPile->getContenu();
+	if (estVide())
+	{
+		throw runtime_error("Action impossible: pile vide!");
+	}
+	else
+	{
+		return sommetPile->getContenu();
+	}
 }

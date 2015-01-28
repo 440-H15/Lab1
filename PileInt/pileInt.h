@@ -3,6 +3,8 @@
 
 #include "noeudInt.h"
 
+using namespace std;
+
 class PileInt
 {
   public:
