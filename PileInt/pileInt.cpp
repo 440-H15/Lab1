@@ -31,6 +31,7 @@ void PileInt::depiler()
 	{
 		throw std::runtime_error("La pile est vide!");
 	}
+	
 	NoeudInt* vieuxSommet = this->sommetPile;
 	this->sommetPile = this->sommetPile->getPrecedent();
 	delete vieuxSommet;
@@ -38,5 +39,10 @@ void PileInt::depiler()
 
 int PileInt::consulter()
 {
+	if (estVide())
+	{
+		throw std::runtime_error("La pile est vide!");
+	}
+
 	return this->sommetPile->getContenu();
 }
