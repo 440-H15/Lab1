@@ -53,6 +53,10 @@ void PileInt::depiler()
 
 		delete newPtr;
 	}
+	else
+	{
+		throw std::runtime_error("La pile est vide");
+	}
 
 
 }
