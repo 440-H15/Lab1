@@ -29,27 +29,31 @@ void PileInt::empiler(int _nombre){
 		sommetPile = nouveauNoeud;
 	}
 
-	
+
 }
 
 void PileInt::depiler(){
 
-	
-		if (estVide() == false){
-			NoeudInt* noeudASupprimer = sommetPile;
-			sommetPile = sommetPile->getPrecedent();
-			delete noeudASupprimer;
-		}
-		else{
-			throw runtime_error("La pile est vide");
-		}
 
-	
+	if (estVide() == false){
+		NoeudInt* noeudASupprimer = sommetPile;
+		sommetPile = sommetPile->getPrecedent();
+		delete noeudASupprimer;
+	}
+	else{
+		throw runtime_error("La pile est vide");
+	}
+
+
 
 }
 
 int PileInt::consulter(){
-	int contenu = sommetPile->getContenu();
-	return contenu;
-
+	if (estVide()){
+		throw runtime_error("La pile est vide");
+	}
+	else{
+		int contenu = sommetPile->getContenu();
+		return contenu;
+	}
 }
