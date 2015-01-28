@@ -9,7 +9,9 @@ public:
 	NoeudInt* getPrecedent();
 	void setPrecedent();
   private:
-	
+	int contenu;
+	NoeudInt* precedent;
+
 };
 
 #endif //NOEUDINT_H_
