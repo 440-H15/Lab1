@@ -4,10 +4,10 @@
 class NoeudInt
 {
 public:
-	void setContenu(int contenu);
+	void setContenu(int _nombre);
 	int getContenu();
 	NoeudInt* getPrecedent();
-	void setPrecedent();
+	void setPrecedent(NoeudInt* noeudPrecedant);
   private:
 	int contenu;
 	NoeudInt* precedent;
