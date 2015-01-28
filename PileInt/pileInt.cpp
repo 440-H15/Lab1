@@ -4,6 +4,13 @@ PileInt::PileInt(){
 	sommetPile = nullptr;
 }
 
+PileInt::~PileInt(){
+	while (estVide() == false)
+	{
+		depiler();
+	}
+}
+
 bool PileInt::estVide(){
 	if (sommetPile == nullptr){
 		return true;
@@ -39,5 +46,7 @@ void PileInt::depiler(){
 }
 
 int PileInt::consulter(){
-	return 0;
+	int contenu = sommetPile->getContenu();
+	return contenu;
+
 }

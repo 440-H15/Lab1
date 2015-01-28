@@ -3,7 +3,7 @@
 #
 #include "pileInt.h"
 
-#include <vld.h>
+//#include <vld.h>
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -15,8 +15,8 @@ namespace Tests
 
 		TEST_METHOD(creer_une_pile_vide)
 		{
-			PileInt pile;
-
+		    PileInt pile;
+			
 			Assert::IsTrue(pile.estVide());
 		}
 
@@ -39,7 +39,7 @@ namespace Tests
 			Assert::IsTrue(pile.estVide());
 		}
 
-		/*TEST_METHOD(consulter_devrait_retourner_le_int_du_dessus_de_la_pile)
+		TEST_METHOD(consulter_devrait_retourner_le_int_du_dessus_de_la_pile)
 		{
 			const int INT_ATTENDU = 10;
 			PileInt pile;
@@ -48,9 +48,9 @@ namespace Tests
 			int intObtenu = pile.consulter();
 
 			Assert::AreEqual(INT_ATTENDU, intObtenu);
-		}*/
+		}
 
-		/*TEST_METHOD(consulter_tous_les_int_de_la_pile_devrait_les_retourner_dans_l_ordre_inverse_de_l_ajout)
+		TEST_METHOD(consulter_tous_les_int_de_la_pile_devrait_les_retourner_dans_l_ordre_inverse_de_l_ajout)
 		{
 			PileInt pile;
 
@@ -64,7 +64,7 @@ namespace Tests
 
 			Assert::AreEqual(dernierElement, 3);
 			Assert::AreEqual(premierElement, 1);
-		}*/
+		}
 
 		//TEST_METHOD(depiler_une_pile_vide_devrait_lancer_une_exception)
 		//{
