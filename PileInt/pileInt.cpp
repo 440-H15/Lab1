@@ -40,6 +40,9 @@ void PileInt::depiler(){
 			sommetPile = sommetPile->getPrecedent();
 			delete noeudASupprimer;
 		}
+		else{
+			throw runtime_error("La pile est vide");
+		}
 
 	
 

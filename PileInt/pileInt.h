@@ -2,7 +2,8 @@
 #define PILE_H_
 
 #include "noeudInt.h"
-
+using namespace std;
+#include <iostream>
 class PileInt
 {
   public:
