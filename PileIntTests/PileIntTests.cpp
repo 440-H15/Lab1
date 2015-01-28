@@ -3,7 +3,7 @@
 
 #include "pileInt.h"
 
-//#include <vld.h>
+#include <vld.h>
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
