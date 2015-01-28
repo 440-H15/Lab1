@@ -61,7 +61,6 @@ namespace Tests
 			pile.depiler();
 			int premierElement = pile.consulter();
 
-
 			Assert::AreEqual(dernierElement, 3);
 			Assert::AreEqual(premierElement, 1);
 		}
@@ -79,7 +78,6 @@ namespace Tests
 			}
 			catch (std::runtime_error ex)
 			{
-
 				exceptionThrown = true;
 			}
 
@@ -100,7 +98,6 @@ namespace Tests
 			}
 			catch (std::runtime_error ex)
 			{
-
 				exceptionThrown = true;
 			}
 

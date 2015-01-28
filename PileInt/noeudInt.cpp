@@ -1,4 +1,4 @@
-#include "noeudInt.h"	
+#include "noeudInt.h"
 
 NoeudInt::NoeudInt(int _contenu)
 {
