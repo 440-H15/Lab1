@@ -1,4 +1,5 @@
 #include "PileInt.h"
+#include <stdexcept>
 
 bool PileInt::estVide()
 {
@@ -14,10 +15,17 @@ void PileInt::empiler(int _nombre)
 }
 
 void PileInt::depiler()
-{
-	NoeudInt* aSupprimer = sommetPile;
-	sommetPile = sommetPile->getPrecedent();
-	delete aSupprimer;
+{	
+	if (estVide())
+	{
+		throw runtime_error("Action impossible: pile vide!");
+	}
+	else 
+	{
+		NoeudInt* aSupprimer = sommetPile;
+		sommetPile = sommetPile->getPrecedent();
+		delete aSupprimer;
+	}	
 }
 
 int PileInt::consulter()
