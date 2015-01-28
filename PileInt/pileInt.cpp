@@ -1,5 +1,7 @@
 #include "PileInt.h"
 
+#include <stdexcept>
+
 PileInt::PileInt()
 {
 	sommetPile = nullptr;
@@ -26,6 +28,10 @@ void PileInt::depiler()
 		NoeudInt* noeudAEnlever = sommetPile;
 		sommetPile = sommetPile->getPrecedent();
 		delete noeudAEnlever;
+	}
+	else
+	{
+		throw std::runtime_error("La pile est vide");
 	}
 }
 
