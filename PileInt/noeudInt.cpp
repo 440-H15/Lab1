@@ -1,5 +1,10 @@
 #include "noeudInt.h"	
 
+NoeudInt::NoeudInt()
+{
+	precedent = new NoeudInt();
+}
+
 int NoeudInt::getContenu()
 {
 	return contenu;
