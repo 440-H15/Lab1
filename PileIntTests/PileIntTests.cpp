@@ -12,7 +12,6 @@ namespace Tests
 	TEST_CLASS(PileIntTests)
 	{
 	public:
-
 		TEST_METHOD(creer_une_pile_vide)
 		{
 			PileInt pile;
@@ -87,25 +86,25 @@ namespace Tests
 			Assert::IsTrue(exceptionThrown);
 		}
 
-		//TEST_METHOD(consulter_une_pile_vide_devrait_lancer_une_exception)
-		//{
-		//	//Arrange
-		//	bool exceptionThrown = false;
-		//	PileInt pile;
+		TEST_METHOD(consulter_une_pile_vide_devrait_lancer_une_exception)
+		{
+			//Arrange
+			bool exceptionThrown = false;
+			PileInt pile;
 
-		//	//Action
-		//	try
-		//	{
-		//		pile.consulter();
-		//	}
-		//	catch (std::runtime_error ex)
-		//	{
+			//Action
+			try
+			{
+				pile.consulter();
+			}
+			catch (std::runtime_error ex)
+			{
 
-		//		exceptionThrown = true;
-		//	}
+				exceptionThrown = true;
+			}
 
-		//	//Assert
-		//	Assert::IsTrue(exceptionThrown);
-		//}
+			//Assert
+			Assert::IsTrue(exceptionThrown);
+		}
 	};
 }
