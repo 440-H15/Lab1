@@ -1,22 +1,27 @@
 #include "noeudInt.h"	
 
-NoeudInt::NoeudInt(){
+NoeudInt::NoeudInt()
+{
 	precedent = nullptr;
 }
 
-int NoeudInt::getContenu(){
+int NoeudInt::getContenu()
+{
 	return contenu;
 }
 
-void NoeudInt::setContenu(int _nombre){
+void NoeudInt::setContenu(int _nombre)
+{
 	contenu = _nombre;
 }
 
-NoeudInt* NoeudInt::getPrecedent(){
+NoeudInt* NoeudInt::getPrecedent()
+{
 	return precedent;
 }
 
-void NoeudInt::setPrecedent(NoeudInt* _noeudPrecedent){
+void NoeudInt::setPrecedent(NoeudInt* _noeudPrecedent)
+{
 	precedent = _noeudPrecedent;
 }
 

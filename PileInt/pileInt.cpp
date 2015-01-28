@@ -4,11 +4,18 @@
 
 using namespace std;
 
-PileInt::PileInt(){
+PileInt::PileInt()
+{
 	sommetPile = nullptr;
 }
 
-bool PileInt::estVide(){
+PileInt::~PileInt()
+{
+
+}
+
+bool PileInt::estVide()
+{
 	bool isEmpty = true;
 
 	if (sommetPile != nullptr){
@@ -18,7 +25,8 @@ bool PileInt::estVide(){
 	return isEmpty;
 }
 
-void PileInt::empiler(int _nombre){
+void PileInt::empiler(int _nombre)
+{
 
 	NoeudInt* newNode = new NoeudInt();
 	newNode->setContenu(_nombre);
@@ -27,7 +35,8 @@ void PileInt::empiler(int _nombre){
 	
 }
 
-void PileInt::depiler(){
+void PileInt::depiler()
+{
 
 	if (!estVide()){
 		NoeudInt* tempNode = new NoeudInt();
@@ -41,7 +50,8 @@ void PileInt::depiler(){
 
 }
 
-int PileInt::consulter(){
+int PileInt::consulter()
+{
 	if (estVide()){
 		throw runtime_error("La pile est vide");
 	}
