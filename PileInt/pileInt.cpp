@@ -1,4 +1,5 @@
 #include "PileInt.h"
+#include <system_error>
 
 PileInt::PileInt(){
 
@@ -60,7 +61,7 @@ int PileInt::consulter()
 {
 	if (sommetPile == nullptr)
 	{
-		return 0;
+		throw std::runtime_error("La pile est vide");
 	}
 	else
 	{
