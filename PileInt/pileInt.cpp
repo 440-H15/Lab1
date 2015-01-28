@@ -3,7 +3,7 @@
 
 bool PileInt::estVide()
 {
-	if (sommetPile == nullptr) return true;// Si sommetPile n'est pas null
+	if (sommetPile == nullptr) return true;
 
 	return false;
 }
