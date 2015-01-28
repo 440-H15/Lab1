@@ -3,8 +3,6 @@
 
 #include "pileInt.h"
 
-#include <vld.h>
-
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace Tests
@@ -13,12 +11,12 @@ namespace Tests
 	{
 	public:
 
-		//TEST_METHOD(creer_une_pile_vide)
-		//{
-		//	PileInt pile;
+		TEST_METHOD(creer_une_pile_vide)
+		{
+			PileInt pile;
 
-		//	Assert::IsTrue(pile.estVide());
-		//}
+			Assert::IsTrue(pile.estVide());
+		}
 
 		//TEST_METHOD(empiler_un_int_devrait_l_ajouter_a_la_pile)
 		//{
