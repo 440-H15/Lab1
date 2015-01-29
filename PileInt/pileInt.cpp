@@ -40,5 +40,9 @@ void PileInt::depiler(){
 }
 
 int PileInt::consulter(){
-	return 0;
+
+	int contenu;
+	contenu = sommetPile->returnContenu();
+	return contenu;
+
 }

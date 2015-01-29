@@ -12,3 +12,7 @@ void NoeudInt::setPrecedent(NoeudInt* firstNoeud){
 NoeudInt* NoeudInt::getPrecedent(){
 	return precedent;
 }
+
+int NoeudInt::returnContenu(){
+	return contenu;
+}

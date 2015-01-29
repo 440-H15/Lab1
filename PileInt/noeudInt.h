@@ -7,6 +7,7 @@ class NoeudInt
 	  NoeudInt(int _nombre);
 	  void setPrecedent(NoeudInt* firstNoeud);
 	  NoeudInt* getPrecedent();
+	  int returnContenu();
   private:
 	  int contenu;
 	  NoeudInt* precedent;
