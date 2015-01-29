@@ -9,6 +9,7 @@ class PileInt
 	  PileInt();
 	  bool estVide();
 	  void empiler(int _nombre);
+	  void depiler();
   private:
 	  NoeudInt *premierNoeud;
 };

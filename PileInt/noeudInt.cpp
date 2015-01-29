@@ -6,3 +6,8 @@ NoeudInt::NoeudInt(int _nombre, NoeudInt *_suivant)
 	nombre = _nombre;
 }
 
+NoeudInt* NoeudInt::getSuivant()
+{
+	return suivant;
+}
+

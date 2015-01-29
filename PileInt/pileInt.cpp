@@ -21,3 +21,9 @@ void PileInt::empiler(int _nombre)
 {
 	premierNoeud = new NoeudInt(_nombre, premierNoeud);
 }
+
+void PileInt::depiler()
+{
+	NoeudInt *temp = premierNoeud;
+	premierNoeud = premierNoeud->getSuivant();
+}
