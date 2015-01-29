@@ -11,6 +11,7 @@ class PileInt
 	  bool estVide();
 	  void empiler(int);
 	  void depiler();
+	  int consulter();
   private:
 	  NoeudInt* sommetPile;
 };

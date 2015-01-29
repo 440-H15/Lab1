@@ -31,4 +31,9 @@ void PileInt::depiler()
 	sommetPile = nullptr;
 }
 
+int PileInt::consulter()
+{
+	int valeurSommet = sommetPile->getContenu();
+	return valeurSommet;
+}
 
