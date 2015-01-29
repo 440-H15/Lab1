@@ -1,5 +1,5 @@
 #include "PileInt.h"
-
+#include <stdexcept>
 
 PileInt::PileInt()
 {
@@ -50,13 +50,24 @@ void PileInt::depiler()
 		}
 		else
 		{
-			sommetPile = nullptr;
 			delete sommetPile;
+			sommetPile = nullptr;
 		}
+	}
+	else
+	{
+		throw std::runtime_error("Le pile est déjà vidé");
 	}
 }
 
 int PileInt::consulter()
 {
-	return sommetPile->getContenu();
+	if (estVide())
+	{
+		throw std::runtime_error("Le pile est vide");
+	}
+	else
+	{
+		return sommetPile->getContenu();
+	}
 }
