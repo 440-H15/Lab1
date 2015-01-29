@@ -4,6 +4,12 @@ PileInt::PileInt(){
 	sommetPile = nullptr;
 }
 
+PileInt::~PileInt(){
+	while (sommetPile != nullptr){
+		depiler();
+	}
+}
+
 bool PileInt:: estVide(){
 	
 	if (sommetPile != nullptr){
