@@ -8,6 +8,7 @@ class PileInt
   public:
 	  bool estVide();
 	  void empiler(int i);
+	  void depiler();
   private:
 	  NoeudInt * sommetPile;
 };

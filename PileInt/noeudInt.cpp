@@ -24,9 +24,9 @@ void NoeudInt::SetInt(int _nombre)
 	nombre = _nombre;
 }
 
-NoeudInt NoeudInt::GetNext()
+NoeudInt* NoeudInt::GetNext()
 {
-	return *next;
+	return next;
 }
 
 void NoeudInt::SetNext(NoeudInt* _next)

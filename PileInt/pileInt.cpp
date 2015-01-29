@@ -12,8 +12,18 @@ bool PileInt::estVide()
 
 void PileInt::empiler(int i)
 {
-	NoeudInt * nouveauNoeud = new NoeudInt;
+	NoeudInt* nouveauNoeud = new NoeudInt;
 	nouveauNoeud->SetInt(i);
 	nouveauNoeud->SetNext(sommetPile);
 	sommetPile = nouveauNoeud;
+}
+
+void PileInt::depiler()
+{
+	if (sommetPile != nullptr)
+	{
+		NoeudInt* noeudAEnlever = new NoeudInt;
+		sommetPile = sommetPile->GetNext();
+		delete noeudAEnlever;
+	}
 }

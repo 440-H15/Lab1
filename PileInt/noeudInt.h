@@ -4,16 +4,16 @@
 class NoeudInt
 {
   public:
-	  NoeudInt(int _nombre, NoeudInt * _next);
+	  NoeudInt(int _nombre, NoeudInt* _next);
 	  NoeudInt(void);
 	  ~NoeudInt(void);
 	  int GetInt();
 	  void SetInt(int _nombre);
-	  NoeudInt GetNext();
-	  void SetNext(NoeudInt * _next);
+	  NoeudInt* GetNext();
+	  void SetNext(NoeudInt* _next);
   private:
 	  int nombre;
-	  NoeudInt * next;
+	  NoeudInt* next;
 };
 
 #endif //NOEUDINT_H_
