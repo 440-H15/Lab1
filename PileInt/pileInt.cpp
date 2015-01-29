@@ -26,4 +26,9 @@ void PileInt::empiler(int _nombre)
 	sommetPile = newNoeud;
 }
 
+void PileInt::depiler()
+{
+	sommetPile = nullptr;
+}
+
 

@@ -10,6 +10,7 @@ class PileInt
 	  PileInt();
 	  bool estVide();
 	  void empiler(int);
+	  void depiler();
   private:
 	  NoeudInt* sommetPile;
 };
