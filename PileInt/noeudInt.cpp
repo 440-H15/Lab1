@@ -11,3 +11,7 @@ NoeudInt* NoeudInt::getSuivant()
 	return suivant;
 }
 
+int NoeudInt::getNombre()
+{
+	return nombre;
+}

@@ -27,3 +27,8 @@ void PileInt::depiler()
 	NoeudInt *temp = premierNoeud;
 	premierNoeud = premierNoeud->getSuivant();
 }
+
+int PileInt::consulter()
+{
+	return premierNoeud->getNombre();
+}
