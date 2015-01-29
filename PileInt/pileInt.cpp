@@ -9,3 +9,11 @@ bool PileInt::estVide()
 	}
 	return false;
 }
+
+void PileInt::empiler(int i)
+{
+	NoeudInt * nouveauNoeud = new NoeudInt;
+	nouveauNoeud->SetInt(i);
+	nouveauNoeud->SetNext(sommetPile);
+	sommetPile = nouveauNoeud;
+}
