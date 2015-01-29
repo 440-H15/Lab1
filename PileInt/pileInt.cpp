@@ -27,3 +27,8 @@ void PileInt::depiler()
 		delete noeudAEnlever;
 	}
 }
+
+int PileInt::consulter()
+{
+	return sommetPile->GetInt();
+}
