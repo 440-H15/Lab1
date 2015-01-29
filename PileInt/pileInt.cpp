@@ -42,20 +42,21 @@ void PileInt::depiler()
 	if (!estVide())
 	{
 		NoeudInt* tempNoeud = new NoeudInt();
-		if (sommetPile->getPrecedent != nullptr)
+		if (sommetPile->getPrecedent() != nullptr)
 		{
-			tempNoeud = sommetPile->getPrecedent;
+			tempNoeud = sommetPile->getPrecedent();
 			delete sommetPile;
+			sommetPile = tempNoeud;
 		}
 		else
 		{
+			sommetPile = nullptr;
 			delete sommetPile;
 		}
-		sommetPile = tempNoeud;
 	}
 }
 
 int PileInt::consulter()
 {
-	return sommetPile->getContenu;
+	return sommetPile->getContenu();
 }

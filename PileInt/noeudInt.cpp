@@ -2,7 +2,12 @@
 
 NoeudInt::NoeudInt()
 {
-	precedent = new NoeudInt();
+	precedent = nullptr;
+}
+
+NoeudInt::~NoeudInt()
+{
+
 }
 
 int NoeudInt::getContenu()
