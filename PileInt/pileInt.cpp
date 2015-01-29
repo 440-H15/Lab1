@@ -1,7 +1,23 @@
 #include "PileInt.h"
 
-bool PileInt::estVide()
+PileInt::PileInt()
 {
-	return true;
+	premierNoeud = nullptr;
 }
 
+bool PileInt::estVide()
+{
+	if (premierNoeud == nullptr)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+void PileInt::empiler(int _nombre)
+{
+	premierNoeud = new NoeudInt(_nombre, premierNoeud);
+}

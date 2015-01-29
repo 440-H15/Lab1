@@ -6,9 +6,11 @@
 class PileInt
 {
   public:
-	     bool estVide();
+	  PileInt();
+	  bool estVide();
+	  void empiler(int _nombre);
   private:
-        
+	  NoeudInt *premierNoeud;
 };
 
 #endif //PILE_H_
