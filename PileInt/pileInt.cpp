@@ -22,3 +22,14 @@ void PileInt::empiler(int _nombre){
 		sommetPile = noeud;
 	}
 }
+
+void PileInt:: depiler(){
+	NoeudInt* tmp;
+	tmp = sommetPile;
+	sommetPile = tmp->getPrecedent;
+	delete tmp;
+}
+
+int PileInt::consulter(){
+	return sommetPile->getContenu;
+}
