@@ -6,9 +6,13 @@
 class PileInt
 {
   public:
-	     
+	  //PileInt();
+	  int consulter();
+	  void depiler();
+	  bool estVide();
   private:
-        
+	  NoeudInt* sommetPile;
+	
 };
 
 #endif //PILE_H_
