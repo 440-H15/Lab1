@@ -4,9 +4,15 @@
 class NoeudInt
 {
   public:
+	  NoeudInt();
+	  int getContenu();
+	  void setContenu(int _nombre);
+	  NoeudInt * getPrecenent();
+	  void setPrecedent(NoeudInt * _noeudPrecedent);
 	
   private:
-	
+	  int contenu;
+	  NoeudInt * precedent;
 };
 
 #endif //NOEUDINT_H_
