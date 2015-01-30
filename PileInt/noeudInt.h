@@ -4,8 +4,13 @@
 class NoeudInt
 {
   public:
-	
+	  NoeudInt();
+	  ~NoeudInt();
+	  int getData();
+	  NoeudInt* getNextNode();
   private:
+	  NoeudInt* nextNode;
+	  int data;
 	
 };
 
