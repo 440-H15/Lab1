@@ -6,9 +6,15 @@
 class PileInt
 {
   public:
-	     
+	  PileInt();
+	  ~PileInt();
+	  void push(int data);
+	  int pop();
+	  int peek();
+	  bool empty();
   private:
-        
+	  unsigned int size;
+	  NoeudInt* firstNode;
 };
 
 #endif //PILE_H_
