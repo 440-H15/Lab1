@@ -10,11 +10,11 @@ class PileInt
 {
   public:
 	  void empiler(int _nombre);
-	  //int consulter();
+	  int consulter();
 	  void depiler();
 	  bool estVide();
 	  PileInt();
-	  //~PileInt();
+	  ~PileInt();
 	     
   private:
 	  NoeudInt* sommetPile;
