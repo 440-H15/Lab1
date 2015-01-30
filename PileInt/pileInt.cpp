@@ -5,57 +5,39 @@
 
 using namespace std;
 
-PileInt::PileInt(){
+PileInt::PileInt()
+{
 	sommetPile = nullptr;
 }
 
-bool PileInt::estVide(){
-	if (sommetPile == nullptr){
-		return true;
-	}
-	else{
-		return false;
+PileInt::~PileInt()
+{
+	while (sommetPile != nullptr)
+	{
+		depiler();
 	}
 }
 
 void PileInt::empiler(int _nombre){
-	if (estVide())
-	{
-		sommetPile = nullptr;
-	}
 	sommetPile = new NoeudInt(_nombre, sommetPile);
 }
 
 void PileInt::depiler(){
 
+	if (estVide()) throw runtime_error("Le pile est vide");
 
-
-	if (!estVide()){
-		NoeudInt* noeudAEnlever = sommetPile;
-		sommetPile = sommetPile->getNoeud();
-		delete noeudAEnlever;
-	}
-	else
-	{
-		throw runtime_error("Le pile est vide");
-	}
-
-
+	NoeudInt* noeudAEnlever = sommetPile;
+	sommetPile = sommetPile->getPrecedent();
+	delete noeudAEnlever;
 }
 
 int PileInt::consulter()
 {
-	int nb = 0;
-	if (sommetPile != NULL)
-	{
-		nb = sommetPile->getNombre();
-	}
-	else
-	{
-		throw runtime_error("Le pile est vide");
-	}
+	if (estVide()) throw runtime_error("Le pile est vide");
 
-	return nb;
+	return sommetPile->getContenu();;
 }
 
-
+bool PileInt::estVide(){
+	return (sommetPile == nullptr);
+}

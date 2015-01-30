@@ -7,11 +7,11 @@ class NoeudInt
 	  NoeudInt(int _nombre, NoeudInt* _noeudPrecedent);
 	  ~NoeudInt();
 
-	  int getNombre();
-	  NoeudInt* getNoeud();
+	  int getContenu();
+	  NoeudInt* getPrecedent();
 		
   private:
-	  int nombre;
+	  int contenu;
 	  NoeudInt* noeudPrecedent;
 };
 

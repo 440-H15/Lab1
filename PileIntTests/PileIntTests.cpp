@@ -4,7 +4,6 @@
 #include "pileInt.h"
 
 
-
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace Tests

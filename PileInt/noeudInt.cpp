@@ -1,20 +1,21 @@
 #include "noeudInt.h"	
 
-NoeudInt::NoeudInt(int _nombre, NoeudInt* _noeudPrecedent){
-	nombre = _nombre;
+NoeudInt::NoeudInt(int _nombre, NoeudInt* _noeudPrecedent)
+{
+	contenu = _nombre;
 	noeudPrecedent = _noeudPrecedent;
 }
 
-NoeudInt::~NoeudInt(){
-
-}
-
-int NoeudInt::getNombre()
+NoeudInt::~NoeudInt()
 {
-	return nombre;
 }
 
-NoeudInt* NoeudInt::getNoeud()
+int NoeudInt::getContenu()
+{
+	return contenu;
+}
+
+NoeudInt* NoeudInt::getPrecedent()
 {
 	return noeudPrecedent;
 }
