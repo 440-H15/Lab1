@@ -12,6 +12,18 @@ bool PileInt::estVide(){
 	return returnVal;
 }
 
-void PileInt::empiler(int _nombre){
+void PileInt::empiler(int _nombre){ // Two cases: Empty and 1 item
+	NoeudInt *nouveauNoeud = new NoeudInt(_nombre);
+	if (estVide()){
+		sommetPile = nouveauNoeud;
+	}
+	else{
+		NoeudInt *sommetTemp = sommetPile;
+		sommetPile = nouveauNoeud;
+		nouveauNoeud->setPrecedent(sommetTemp);
+	}
+}
+
+void PileInt::depiler(){ // Two cases: 1 item, and more than one.
 
 }

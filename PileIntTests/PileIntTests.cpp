@@ -3,7 +3,6 @@
 
 #include "pileInt.h"
 
-#include <vld.h>
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -20,14 +19,14 @@ namespace Tests
 			Assert::IsTrue(pile.estVide());
 		}
 
-		//TEST_METHOD(empiler_un_int_devrait_l_ajouter_a_la_pile)
-		//{
-		//	PileInt pile;
+		TEST_METHOD(empiler_un_int_devrait_l_ajouter_a_la_pile)
+		{
+			PileInt pile;
 
-		//	pile.empiler(10);
+			pile.empiler(10);
 
-		//	Assert::IsFalse(pile.estVide());
-		//}
+			Assert::IsFalse(pile.estVide());
+		}
 
 		//TEST_METHOD(depiler_un_int_devrait_le_supprimer_de_la_pile)
 		//{

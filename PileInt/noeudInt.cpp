@@ -1,7 +1,8 @@
 #include "noeudInt.h"	
 
 NoeudInt::NoeudInt(){
-
+	contenu = 0;
+	precedent = nullptr;
 }
 
 NoeudInt::NoeudInt(int _nombre){
