@@ -1,6 +1,19 @@
 #include "PileInt.h"
 #include <stdexcept>
 
+PileInt::PileInt()
+{
+	sommetPile = nullptr;
+}
+
+PileInt::~PileInt()
+{
+	while (!estVide())
+	{
+		depiler();
+	}
+}
+
 bool PileInt::estVide()
 {
 	return sommetPile == nullptr;
@@ -39,3 +52,4 @@ int PileInt::consulter()
 		return sommetPile->getContenu();
 	}
 }
+

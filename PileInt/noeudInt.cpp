@@ -1,5 +1,11 @@
 #include "noeudInt.h"	
 
+NoeudInt::NoeudInt()
+{
+	contenu = 0;
+	precedent = nullptr;
+}
+
 void NoeudInt::setContenu(int _nombre)
 {
 	contenu = _nombre;
