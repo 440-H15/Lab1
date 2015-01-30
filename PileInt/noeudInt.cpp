@@ -1,13 +1,8 @@
 #include "noeudInt.h"	
 
-NoeudInt::NoeudInt(int _nombre, NoeudInt* _next)
-{
-	nombre = _nombre;
-	next = _next;
-}
-
 NoeudInt::NoeudInt()
 {
+	nombre = 0;
 }
 
 NoeudInt::~NoeudInt()

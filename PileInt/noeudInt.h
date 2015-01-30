@@ -4,7 +4,6 @@
 class NoeudInt
 {
   public:
-	  NoeudInt(int _nombre, NoeudInt* _next);
 	  NoeudInt(void);
 	  ~NoeudInt(void);
 	  int GetInt();
