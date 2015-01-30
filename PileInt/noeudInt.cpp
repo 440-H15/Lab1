@@ -1,5 +1,11 @@
 #include "noeudInt.h"	
 
+NoeudInt::NoeudInt()
+{
+	contenu = 0;
+	precedent = nullptr;
+}
+
 int NoeudInt::getContenu()
 {
 	return this->contenu;
