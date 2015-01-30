@@ -1,4 +1,5 @@
 #include "PileInt.h"
+#include <system_error>
 
 PileInt::PileInt()
 {
@@ -34,7 +35,7 @@ void PileInt::depiler()
 {
 	if (nullptr == premierNoeud)
 	{
-		throw;
+		throw std::runtime_error("La pile est vide!");
 	}
 	else
 	{
@@ -48,7 +49,7 @@ int PileInt::consulter()
 {
 	if (nullptr == premierNoeud)
 	{
-		throw;
+		throw std::runtime_error("La pile est vide!");
 	}
 	else
 	{
