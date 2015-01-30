@@ -5,6 +5,14 @@ PileInt::PileInt()
 	premierNoeud = nullptr;
 }
 
+PileInt::~PileInt()
+{
+	while (nullptr != premierNoeud)
+	{
+		depiler();
+	}
+}
+
 bool PileInt::estVide()
 {
 	if (premierNoeud == nullptr)
@@ -32,7 +40,7 @@ void PileInt::depiler()
 	{
 		NoeudInt *temp = premierNoeud;
 		premierNoeud = premierNoeud->getSuivant();
-		delete temp;
+		delete *temp;
 	}
 }
 
