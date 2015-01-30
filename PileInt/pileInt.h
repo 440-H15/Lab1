@@ -5,10 +5,14 @@
 
 class PileInt
 {
-  public:
-	     
-  private:
-        
+public:
+	PileInt(void);
+	bool estVide();
+	void empiler(int i);
+	void depiler();
+	int consulter();
+private:
+	NoeudInt* sommetPile;
 };
 
 #endif //PILE_H_
