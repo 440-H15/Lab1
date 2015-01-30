@@ -4,7 +4,7 @@
 class NoeudInt
 {
   public:
-	  NoeudInt(int* obj, NoeudInt* next);
+	  NoeudInt(int obj, NoeudInt next);
 	  NoeudInt();
 	  NoeudInt getNext();
 	  int getObject();

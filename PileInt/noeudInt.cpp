@@ -1,15 +1,15 @@
 #include "noeudInt.h"	
-
+#include <stdlib.h>
 
 NoeudInt::NoeudInt(){
-	*object = -1;
-	nextNode = nullptr;
+	object = NULL;
+	nextNode = NULL;
 	
 }
 
-NoeudInt::NoeudInt( int* obj,NoeudInt* next){
-	object = obj;
-	nextNode = next;
+NoeudInt::NoeudInt( int obj,NoeudInt next){
+	*object = obj;
+	*nextNode = next;
 }
 
 NoeudInt NoeudInt::getNext(){
