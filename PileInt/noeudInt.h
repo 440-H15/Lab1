@@ -5,6 +5,7 @@
 class NoeudInt
 {
 public:
+	NoeudInt();
 	void setContenu(int _nombre);
 	int getContenu();
 	NoeudInt* getPrecedent();
