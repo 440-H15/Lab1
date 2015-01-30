@@ -6,6 +6,8 @@
 class PileInt
 {
   public:
+	  PileInt();
+	  ~PileInt();
 	  void push();
 	  int pop();
 	  int peek();
