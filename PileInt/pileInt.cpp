@@ -11,14 +11,18 @@ PileInt::PileInt()
 
 PileInt::~PileInt()
 {
-
+	while (estVide() == false)
+	{
+		depiler();
+	}
 }
 
 bool PileInt::estVide()
 {
 	bool isEmpty = true;
 
-	if (sommetPile != nullptr){
+	if (sommetPile != nullptr)
+	{
 		isEmpty = false;
 	}
 
@@ -38,13 +42,15 @@ void PileInt::empiler(int _nombre)
 void PileInt::depiler()
 {
 
-	if (!estVide()){
+	if (!estVide())
+	{
 		NoeudInt* tempNode = new NoeudInt();
 		*tempNode = *sommetPile;
 		sommetPile = sommetPile->getPrecedent();
 		delete tempNode;
 	}
-	else{
+	else
+	{
 		throw runtime_error("La pile est vide");
 	}
 
@@ -52,10 +58,12 @@ void PileInt::depiler()
 
 int PileInt::consulter()
 {
-	if (estVide()){
+	if (estVide())
+	{
 		throw runtime_error("La pile est vide");
 	}
-	else{
+	else
+	{
 		return sommetPile->getContenu();
 	}
 	

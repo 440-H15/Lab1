@@ -3,6 +3,7 @@
 NoeudInt::NoeudInt()
 {
 	precedent = nullptr;
+	contenu = 0;
 }
 
 int NoeudInt::getContenu()
