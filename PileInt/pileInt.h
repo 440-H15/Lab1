@@ -10,6 +10,8 @@ class PileInt
 		 void depiler();
 		 int consulter();
 		 void empiler(int _nombre);
+		 PileInt();
+		 ~PileInt();
   private:
 	  NoeudInt* sommetPile;
 };
