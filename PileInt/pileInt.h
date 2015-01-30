@@ -11,7 +11,7 @@ class PileInt
   public:
 	  void empiler(int _nombre);
 	  //int consulter();
-	  //void depiler();
+	  void depiler();
 	  bool estVide();
 	  PileInt();
 	  //~PileInt();

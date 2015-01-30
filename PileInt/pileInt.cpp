@@ -1,9 +1,9 @@
-#include "PileInt.h"
+#include "pileInt.h"
 
 PileInt::PileInt(){
 	sommetPile = nullptr;
 }
-//
+
 //PileInt::~PileInt(){
 //	while (sommetPile != nullptr){
 //		depiler();
@@ -35,8 +35,14 @@ void PileInt::empiler(int _nombre){
 		temp->setContenu(_nombre);
 		sommetPile = temp;
 	}
+	delete temp;
 }
 
-//void PileInt::depiler(){
-//
-//}
+void PileInt::depiler(){
+	if (sommetPile != nullptr){
+		NoeudInt* temp = new NoeudInt();
+		temp = sommetPile;
+		sommetPile = temp->getPrecedent;
+		delete temp;
+	}
+}
