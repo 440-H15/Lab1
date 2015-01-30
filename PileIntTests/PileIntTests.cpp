@@ -3,7 +3,7 @@
 
 #include "pileInt.h"
 
-#include <vld.h>
+//#include <vld.h>
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -16,7 +16,6 @@ namespace Tests
 		TEST_METHOD(creer_une_pile_vide)
 		{
 			PileInt pile;
-
 			Assert::IsTrue(pile.estVide());
 		}
 
