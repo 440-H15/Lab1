@@ -8,12 +8,17 @@ PileInt::PileInt(){
 }
 
 PileInt::~PileInt(){
-	delete sommetPile;
+
+	while(estVide() == false){
+
+		depiler();
+	}
+
 }
 
 
 bool PileInt::estVide(){
-	
+
 	if (sommetPile == nullptr){
 		return true;
 	}
@@ -25,53 +30,11 @@ bool PileInt::estVide(){
 
 void PileInt::empiler(int _nombre){
 
-	NoeudInt *newPtr = new NoeudInt;
-	newPtr->setContenu(_nombre);
-
-
-	if (sommetPile == nullptr){
-
-		sommetPile = newPtr;
-
-	}
-	else
-	{
-		newPtr->setPrecedent(sommetPile);
-	}
-	
-	sommetPile = newPtr;
-
-	
+	NoeudInt *nouveauNoeud = new NoeudInt;
+	nouveauNoeud->setContenu(_nombre);
+	nouveauNoeud->setPrecedent(sommetPile);
+	sommetPile = nouveauNoeud;
 }
 
 void PileInt::depiler()
 {
-
-	if (sommetPile != nullptr){
-
-		NoeudInt *newPtr = sommetPile;
-		sommetPile = sommetPile->getPrecedent();
-		newPtr = nullptr;
-
-		delete newPtr;
-	}
-	else
-	{
-		throw std::runtime_error("La pile est vide");
-	}
-
-
-}
-
-int PileInt::consulter()
-{
-	if (sommetPile == nullptr)
-	{
-		throw std::runtime_error("La pile est vide");
-	}
-	else
-	{
-		return sommetPile->getContenu();
-	}
-
-}
