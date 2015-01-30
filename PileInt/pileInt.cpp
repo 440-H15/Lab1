@@ -8,7 +8,7 @@ PileInt::PileInt()
 
 PileInt::~PileInt()
 {
-	while (nullptr != premierNoeud)
+	while (!estVide())
 	{
 		depiler();
 	}
@@ -16,14 +16,7 @@ PileInt::~PileInt()
 
 bool PileInt::estVide()
 {
-	if (premierNoeud == nullptr)
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
+	return premierNoeud == nullptr;
 }
 
 void PileInt::empiler(int _nombre)
@@ -33,21 +26,21 @@ void PileInt::empiler(int _nombre)
 
 void PileInt::depiler()
 {
-	if (nullptr == premierNoeud)
+	if (estVide())
 	{
 		throw std::runtime_error("La pile est vide!");
 	}
 	else
 	{
-		NoeudInt *temp = premierNoeud;
+		NoeudInt *noeudAEffacer = premierNoeud;
 		premierNoeud = premierNoeud->getSuivant();
-		delete temp;
+		delete noeudAEffacer;
 	}
 }
 
 int PileInt::consulter()
 {
-	if (nullptr == premierNoeud)
+	if (estVide())
 	{
 		throw std::runtime_error("La pile est vide!");
 	}
