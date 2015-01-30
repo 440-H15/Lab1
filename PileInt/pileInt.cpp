@@ -1,11 +1,26 @@
 #include "PileInt.h"
 #include <iostream>
+#include <stdexcept>
 
 using namespace std;
+
+PileInt::PileInt()
+{
+	sommetPile = nullptr;
+}
+
+PileInt::~PileInt()
+{
+	while (!estVide())
+	{
+		depiler();
+	}
+}
 
 void PileInt::empiler(int _nombre)
 {
 	NoeudInt * newNoeud = new NoeudInt();
+	newNoeud->setContenu(_nombre);
 	if (estVide())
 	{
 		sommetPile = newNoeud;
@@ -34,6 +49,10 @@ void PileInt::depiler()
 		tempNoeud = sommetPile;
 		sommetPile = sommetPile->getPrecenent();
 		delete tempNoeud;
+	}
+	else
+	{
+		throw runtime_error("la pile est vide");
 	}
 }
 

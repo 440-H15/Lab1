@@ -3,6 +3,12 @@
 
 using namespace std;
 
+NoeudInt::NoeudInt()
+{
+	contenu = 0;
+	precedent = nullptr;
+}
+
 int NoeudInt::getContenu()
 {
 	return contenu;

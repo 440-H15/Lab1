@@ -6,6 +6,8 @@
 class PileInt
 {
   public:
+	  PileInt();
+	  ~PileInt();
 	  void empiler(int _nombre);
 	  int consulter();
 	  void depiler();
