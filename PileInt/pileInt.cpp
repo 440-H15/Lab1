@@ -40,7 +40,7 @@ void PileInt::depiler()
 	{
 		NoeudInt *temp = premierNoeud;
 		premierNoeud = premierNoeud->getSuivant();
-		delete *temp;
+		delete temp;
 	}
 }
 
