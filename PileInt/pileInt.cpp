@@ -1,14 +1,25 @@
 #include "PileInt.h"
 #include <system_error>
 
-bool PileInt::estVide()
+PileInt::PileInt()
 {
-	if (sommetPile == nullptr) return true;
-
-	return false;
+	this->sommetPile = nullptr;
 }
 
-void PileInt::empiler(int _nombre)
+PileInt::~PileInt()
+{
+	while (!estVide())
+	{
+		depiler();
+	}
+}
+
+bool PileInt::estVide()
+{
+	return sommetPile == nullptr;
+}
+
+void PileInt::empiler(const int &_nombre)
 {
 	if (estVide())
 	{

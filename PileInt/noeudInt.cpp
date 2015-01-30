@@ -1,6 +1,6 @@
 #include "noeudInt.h"
 
-NoeudInt::NoeudInt(int _contenu)
+NoeudInt::NoeudInt(const int &_contenu)
 {
 	this->contenu = _contenu;
 }
