@@ -22,14 +22,16 @@ bool PileInt::estVide()
 
 void PileInt::empiler(int valeur)
 {
+	NoeudInt * noeudAjouter = new NoeudInt(valeur);
+
 	if (premierNoeud == nullptr)
 	{
-		premierNoeud = new NoeudInt(valeur);
+		premierNoeud = noeudAjouter;
 	}
 	else
 	{
 		NoeudInt * tempNoeud = premierNoeud;
-		premierNoeud = new NoeudInt(valeur);
+		premierNoeud = noeudAjouter;
 		premierNoeud->assignerProchain(tempNoeud);
 	}
 }
