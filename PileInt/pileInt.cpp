@@ -24,11 +24,26 @@ void PileInt::empiler(int _nombre)
 
 void PileInt::depiler()
 {
-	NoeudInt *temp = premierNoeud;
-	premierNoeud = premierNoeud->getSuivant();
+	if (nullptr == premierNoeud)
+	{
+		throw;
+	}
+	else
+	{
+		NoeudInt *temp = premierNoeud;
+		premierNoeud = premierNoeud->getSuivant();
+		delete temp;
+	}
 }
 
 int PileInt::consulter()
 {
-	return premierNoeud->getNombre();
+	if (nullptr == premierNoeud)
+	{
+		throw;
+	}
+	else
+	{
+		return premierNoeud->getNombre();
+	}
 }
