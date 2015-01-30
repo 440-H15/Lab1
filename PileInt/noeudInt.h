@@ -5,6 +5,11 @@ class NoeudInt
 {
   public:
 	
+	  NoeudInt(void);
+	  ~NoeudInt(void);
+	  int nombre;
+	  NoeudInt* prochainNoeud;
+
   private:
 	
 };
