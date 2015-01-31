@@ -8,6 +8,7 @@ class PileInt
   public:
 
 	  PileInt();
+	  ~PileInt();
 	  bool estVide();
 	  void empiler(int i);
 	  void depiler();

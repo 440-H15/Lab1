@@ -1,9 +1,17 @@
 #include "PileInt.h"
+#include <system_error>
 
 
 PileInt::PileInt()
 {
 	sommetPile = nullptr;
+}
+PileInt::~PileInt()
+{
+	do
+	{
+		depiler();
+	} while (!estVide());
 }
 
 bool PileInt::estVide()
@@ -30,21 +38,29 @@ void PileInt::empiler(int nouveauContenu)
 
 void PileInt::depiler()
 {
-
-	do
+	if (estVide())
 	{
-		NoeudInt * tempPtr = sommetPile -> getPrecedent();
-		delete sommetPile;
-		sommetPile = tempPtr;
-
-	} while (sommetPile != nullptr);
+		throw std::runtime_error("pile vide!");
+	}
+	else
+	{
+		NoeudInt * tempPtr = sommetPile;
+		sommetPile = sommetPile->getPrecedent();
+		delete tempPtr;
+	}
 	
 		
-	
-
 }
 
 int PileInt::consulter()
 {
-	return sommetPile->getContenu();
+	if (estVide())
+	{
+		throw std::runtime_error("pile vide!");;
+	}
+	else
+	{
+		return sommetPile->getContenu();
+	}
+	
 }
