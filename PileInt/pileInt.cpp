@@ -7,7 +7,14 @@ PileInt::PileInt()
 {
 	sommetPile = nullptr;
 }
-
+PileInt::~PileInt()
+{
+	if (estVide() == false)
+	{
+		depiler();
+	}
+	
+}
 
 bool PileInt::estVide()
 {
@@ -41,5 +48,6 @@ void PileInt::depiler()
 
 int PileInt::consulter()
 {
+	if (estVide() == true) throw runtime_error("Le pile est vide");
 	return sommetPile->getContenu();
 }
