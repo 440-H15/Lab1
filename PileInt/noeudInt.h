@@ -4,6 +4,7 @@
 class NoeudInt
 {
   public:
+	  NoeudInt();
 	  int getContenu();
 	  void setContenu(int);
 	  NoeudInt* getPrecedent();

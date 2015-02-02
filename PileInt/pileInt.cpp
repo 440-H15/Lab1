@@ -8,7 +8,7 @@ PileInt::PileInt()
 
 bool PileInt::estVide()
 {
-	if (sommetPile == nullptr)
+	if (sommetPile==nullptr)
 	{
 		return true;
 	}
@@ -23,17 +23,19 @@ void PileInt::empiler(int _nombre)
 {
 	NoeudInt* newNoeud = new NoeudInt;
 	newNoeud->setContenu(_nombre);
+	newNoeud->setPrecedent(sommetPile);
 	sommetPile = newNoeud;
 }
 
 void PileInt::depiler()
 {
-	sommetPile = nullptr;
+	NoeudInt* noeudTemp = new NoeudInt;
+	noeudTemp = sommetPile;
+	sommetPile = sommetPile->getPrecedent();
+	delete noeudTemp;
 }
 
 int PileInt::consulter()
 {
-	int valeurSommet = sommetPile->getContenu();
-	return valeurSommet;
+	return sommetPile->getContenu();
 }
-

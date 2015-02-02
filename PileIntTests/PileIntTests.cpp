@@ -50,21 +50,21 @@ namespace Tests
 			Assert::AreEqual(INT_ATTENDU, intObtenu);
 		}
 
-		//TEST_METHOD(consulter_tous_les_int_de_la_pile_devrait_les_retourner_dans_l_ordre_inverse_de_l_ajout)
-		//{
-		//	PileInt pile;
+		TEST_METHOD(consulter_tous_les_int_de_la_pile_devrait_les_retourner_dans_l_ordre_inverse_de_l_ajout)
+		{
+			PileInt pile;
 
-		//	pile.empiler(1);
-		//	pile.empiler(3);
+			pile.empiler(1);
+			pile.empiler(3);
 
-		//	int dernierElement = pile.consulter();
-		//	pile.depiler();
-		//	int premierElement = pile.consulter();
+			int dernierElement = pile.consulter();
+			pile.depiler();
+			int premierElement = pile.consulter();
 
 
-		//	Assert::AreEqual(dernierElement, 3);
-		//	Assert::AreEqual(premierElement, 1);
-		//}
+			Assert::AreEqual(dernierElement, 3);
+			Assert::AreEqual(premierElement, 1);
+		}
 
 		//TEST_METHOD(depiler_une_pile_vide_devrait_lancer_une_exception)
 		//{
