@@ -4,20 +4,20 @@
 using namespace std;
 
 PileInt::PileInt(){
-
 	sommetPile = nullptr;
 }
 
 PileInt::~PileInt(){
 
-
+	while (!estVide()){
+		depiler();
+	}
 }
 
 bool PileInt::estVide(){
-
 	return sommetPile == nullptr;
-
-}void PileInt::empiler(const int &_nombre){
+}
+void PileInt::empiler(const int &_nombre){
 
 	if (estVide()){
 		this->sommetPile = new NoeudInt(_nombre);
@@ -33,11 +33,15 @@ bool PileInt::estVide(){
 void PileInt::depiler(){
 
 	if (!estVide()){
-		NoeudInt* noeudTemp = this->sommetPile;
-		this->sommetPile = this->sommetPile->getPrecedent;
+		NoeudInt* noeudTemp = sommetPile;
+		sommetPile = sommetPile->getPrecedent();
 		delete noeudTemp;
 
 	}
+}
+int PileInt::consulter(){
+
+	return sommetPile->getContenu();
 
 
 }

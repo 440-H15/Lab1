@@ -2,6 +2,14 @@
 
 using namespace std;
 
+NoeudInt::NoeudInt(){
+
+}
+
+NoeudInt::~NoeudInt(){
+
+}
+
 
 int NoeudInt::getContenu(){
 
