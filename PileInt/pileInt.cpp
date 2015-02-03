@@ -17,21 +17,27 @@ bool PileInt::estVide(){
 
 	return sommetPile == nullptr;
 
-}void PileInt::empiler(const int _nombre){
+}void PileInt::empiler(const int &_nombre){
 
 	if (estVide()){
 		this->sommetPile = new NoeudInt(_nombre);
 	}
 	else{
 
-		NoeudInt *noeudTemp = this->sommetPile;
-		
+		NoeudInt* noeudTemp = this->sommetPile;
 		this->sommetPile = new NoeudInt(_nombre);
 		this->sommetPile->setPrecedent(noeudTemp);
+	}
+}
+
+void PileInt::depiler(){
+
+	if (!estVide()){
+		NoeudInt* noeudTemp = this->sommetPile;
+		this->sommetPile = this->sommetPile->getPrecedent;
+		delete noeudTemp;
 
 	}
 
 
 }
-
-

@@ -9,14 +9,14 @@ class PileInt
 	  PileInt();
 	  ~PileInt();
 
-
 	  bool estVide();
-	  void empiler(const int _nombre);
+	  void empiler(const int &_nombre);
 	  int consulter();
-	  int depiler();
+	  void depiler();
+
   private:
         
-	  NoeudInt *sommetPile;
+	  NoeudInt* sommetPile;
 
 
 

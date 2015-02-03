@@ -9,7 +9,6 @@ class NoeudInt
 
 	 
 	  NoeudInt(const int &_contenu);
-
 	  NoeudInt *getPrecedent();
 	  int getContenu();
 	  void setPrecedent(NoeudInt *_noeudPrecent);
@@ -17,7 +16,7 @@ class NoeudInt
   private:
 
 	  int contenu;
-	  NoeudInt *precedent;
+	  NoeudInt* precedent = nullptr;
 
 	
 };
