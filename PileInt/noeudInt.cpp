@@ -13,21 +13,21 @@ NoeudInt::~NoeudInt(){
 
 int NoeudInt::getContenu(){
 
-	return this->contenu;
+	return contenu;
 }
 
 NoeudInt::NoeudInt(const int &_contenu){
 
-	this->contenu = _contenu;
+	contenu = _contenu;
 
 }
 
 NoeudInt* NoeudInt::getPrecedent(){
 
-	return this->precedent;
+	return precedent;
 
 }
 void NoeudInt::setPrecedent(NoeudInt *_noeudPrecent){
 
-	this->precedent = _noeudPrecent;
+	precedent = _noeudPrecent;
 }

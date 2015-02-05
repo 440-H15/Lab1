@@ -1,5 +1,5 @@
 #include "PileInt.h"
-
+#include <system_error>
 
 using namespace std;
 
@@ -20,27 +20,28 @@ bool PileInt::estVide(){
 void PileInt::empiler(const int &_nombre){
 
 	if (estVide()){
-		this->sommetPile = new NoeudInt(_nombre);
+		sommetPile = new NoeudInt(_nombre);
 	}
 	else{
 
 		NoeudInt* noeudTemp = this->sommetPile;
-		this->sommetPile = new NoeudInt(_nombre);
-		this->sommetPile->setPrecedent(noeudTemp);
+		sommetPile = new NoeudInt(_nombre);
+		sommetPile->setPrecedent(noeudTemp);
 	}
 }
 
 void PileInt::depiler(){
 
-	if (!estVide()){
+	if (estVide() == true) throw runtime_error("Le pile est vide");
 		NoeudInt* noeudTemp = sommetPile;
 		sommetPile = sommetPile->getPrecedent();
 		delete noeudTemp;
 
-	}
+	
 }
 int PileInt::consulter(){
 
+	if (estVide() == true) throw runtime_error("Le pile est vide");
 	return sommetPile->getContenu();
 
 
