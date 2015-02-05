@@ -4,8 +4,20 @@
 class NoeudInt
 {
   public:
-	
+	  NoeudInt();
+	  ~NoeudInt();
+
+	 
+	  NoeudInt(const int &_contenu);
+	  NoeudInt *getPrecedent();
+	  int getContenu();
+	  void setPrecedent(NoeudInt *_noeudPrecent);
+
   private:
+
+	  int contenu;
+	  NoeudInt* precedent = nullptr;
+
 	
 };
 
